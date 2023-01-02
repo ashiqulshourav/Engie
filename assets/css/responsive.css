@@ -1,0 +1,261 @@
+/* Mobile Menu Core Style*/
+
+.slicknav_btn {
+    display: block;
+}
+
+.slicknav_menu .slicknav_menutxt {
+    display: inline-block;
+}
+
+.slicknav_menu .slicknav_icon {
+    padding-right: 0;
+}
+
+.slicknav_menu .slicknav_icon:before,
+.slicknav_open .slicknav_arrow:before,
+.slicknav_collapsed .slicknav_arrow:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+.slicknav_open .slicknav_arrow:before {
+    content: "\f056";
+    left: inherit;
+    right: 5px;
+}
+
+.slicknav_collapsed .slicknav_arrow:before {
+    content: "\f055";
+    left: inherit;
+    right: 5px;
+}
+
+.slicknav_open .slicknav_arrow,
+.slicknav_collapsed .slicknav_arrow {
+    position: relative;
+}
+
+.slicknav_menu .slicknav_icon:before {
+    content: "";
+    font-size: 30px;
+    right: 0;
+    top: 8px;
+    left: inherit;
+    color: #e6c0a7;
+    background-position: 0 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.slicknav_menu .slicknav_open .slicknav_icon:before {
+    content: "";
+    background-position: 0 -30px
+}
+
+.slicknav_menu .slicknav_no-text {
+    margin: 0
+}
+
+.slicknav_menu .slicknav_icon-bar {}
+
+.slicknav_btn .slicknav_icon-bar+.slicknav_icon-bar {}
+
+.slicknav_nav {
+    clear: both
+}
+
+.slicknav_nav ul,
+.slicknav_nav li {
+    display: block
+}
+
+.slicknav_nav .slicknav_arrow {
+    float: right
+}
+
+.slicknav_nav .slicknav_item {
+    cursor: pointer;
+    padding: 8px 10px 8px 0;
+}
+
+.slicknav_nav .slicknav_row {
+    display: block;
+}
+
+.slicknav_nav a {
+    display: inline-block;
+    background-image: url(../images/slick-nav-arrow-right.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+}
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    display: inline
+}
+
+.slicknav_menu:before,
+.slicknav_menu:after {
+    content: " ";
+    display: table;
+}
+
+.slicknav_menu:after {
+    clear: both
+}
+
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    width: 100%;
+}
+
+.slicknav_btn {
+    position: absolute;
+    right: 15px;
+    top: -64px;
+    z-index: 9999;
+}
+
+
+/* Button Text */
+
+.slicknav_menu .slicknav_menutxt {
+    font-size: 18px;
+    color: #ff7600;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 60px;
+    padding-right: 0;
+    text-transform: uppercase;
+    float: left;
+}
+
+
+/* Button Lines */
+
+.slicknav_menu .slicknav_icon-bar {}
+
+.slicknav_nav {
+    margin: 0;
+    padding: 0 29px;
+}
+
+.slicknav_nav li {
+    display: block;
+    padding: 0;
+}
+
+.slicknav_nav li a {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 40px;
+    color: #17245E;
+}
+
+.slicknav_nav li ul li a {
+    font-size: 15px;
+    padding: 8px 25px;
+}
+
+.slicknav_nav li ul li ul li a {
+    font-size: 14px;
+}
+
+.slicknav_nav li a:hover,
+.slicknav_nav li.current_page_item>a {
+    color: #00AAFF;
+}
+
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    display: inline-block !important;
+    text-decoration: none !important;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width:1077px) {
+    #menu>li {
+        font-size: 16px;
+        margin-left: 18px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    #menu {
+        display: none
+    }
+    .slicknav_menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: white;
+        z-index: 1;
+    }
+    #menu_holder {
+        display: block;
+        position: relative;
+    }
+    .logo {
+        width: 180px;
+        position: inherit;
+        left: inherit;
+        top: inherit;
+    }
+    .fixed-header .logo {
+        width: 180px;
+        top: inherit;
+    }
+    .fixed-header {
+        position: relative;
+        left: inherit;
+        top: inherit;
+    }
+    .fixed-header nav {
+        padding-top: 0
+    }
+    .menu_content {
+        padding-left: 0;
+        min-height: inherit;
+        padding: 6px 0 22px 0;
+    }
+    .searchbox-open {
+        width: 100%;
+    }
+    .searchbox-icon,
+    .searchbox-submit,
+    .searchbox.searchbox-open .searchbox-icon {
+        background-size: 25px auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 123px;
+        max-height: 44px;
+    }
+    .logo img {
+        max-height: 44px;
+    }
+    nav.menu_bar {
+        margin-top: 44px;
+    }
+}
